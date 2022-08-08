@@ -8,14 +8,37 @@
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
-      "name": "childLinked",
+      "name": "Appserviceplan",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "relativePath": "resources/appservice.json"
+          "uri": "https://raw.githubusercontent.com/mubin-puc/test/main/resources/appserviceplan.json"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
+      "name": "Appservice",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/mubin-puc/test/main/resources/appservice.json"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
+      "name": "Applicationinsights",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/mubin-puc/test/main/resources/apppicationsights.json"
         }
       }
     }
+      
   ],
   "outputs": {}
 }
