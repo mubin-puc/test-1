@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [{
+        "name": "appServicePlan-ifitechdemo-ARM",
+        "type": "Microsoft.Web/serverfarms",
+        "apiVersion": "2018-02-01",
+        "location": "[resourceGroup().location]",
+        "sku": {
+            "name": "F1",
+            "capacity": 1
+        },
+        "tags": {
+            "displayName": "appServicePlan-ifitechdemo-ARM"
+        },
+        "properties": {
+            "name": "appServicePlan-ifitechdemo-ARM"
+        }
+    }],
+    "outputs": {}
+}

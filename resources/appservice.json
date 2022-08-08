@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dev-ifitechdemo-app-ARM": {
+            "type": "string",
+            "defaultValue": "dev-ifitechdemo-app-ARM"
+        }
+    },
+    "variables": {},
+    "resources": [{
+        "name": "[parameters('dev-ifitechdemo-app-ARM')]",
+        "type": "Microsoft.Web/sites",
+        "apiVersion": "2016-08-01",
+        "location": "[resourceGroup().location]",
+        "tags": {
+            "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/appServicePlan-ifitechdemo-ARM')]": "Resource",
+            "displayName": "dev-ifitechdemo-app-ARM"
+        },
+        "dependsOn": [
+            "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
+        ],
+        "properties": {
+            "name": "dev-ifitechdemo-app-ARM",
+            "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
+        }
+    },
+    {
+        "name": "QA-ifitechdemo-app-ARM",
+        "type": "Microsoft.Web/sites",
+        "apiVersion": "2016-08-01",
+        "location": "[resourceGroup().location]",
+        "tags": {
+            "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/appServicePlan-ifitechdemo-ARM')]": "Resource",
+            "displayName": "QA-ifitechdemo-app-ARM"
+        },
+        "dependsOn": [
+            "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
+        ],
+        "properties": {
+            "name": "QA-ifitechdemo-app-ARM",
+            "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
+        }
+    },
+    {
+        "name": "Prod-ifitechdemo-app-ARM",
+        "type": "Microsoft.Web/sites",
+        "apiVersion": "2016-08-01",
+        "location": "[resourceGroup().location]",
+        "tags": {
+            "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/appServicePlan-ifitechdemo-ARM')]": "Resource",
+            "displayName": "Prod-ifitechdemo-app-ARM"
+        },
+        "dependsOn": [
+            "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
+        ],
+        "properties": {
+            "name": "Prod-ifitechdemo-app-ARM",
+            "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
+        }
+    }],
+    "outputs": {}
+}
