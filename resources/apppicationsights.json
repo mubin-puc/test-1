@@ -7,7 +7,7 @@
             "defaultValue": "appInsights1"
         }
     },
-    "variables": {}
+    "variables": {},
     "resources": [
     {
         "name": "[parameters('appInsights1')]",
