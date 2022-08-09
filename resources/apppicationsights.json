@@ -14,9 +14,6 @@
         "type": "microsoft.insights/components/devappserviceARM",
         "apiVersion": "2015-05-01",
         "location": "Central US",
-        "dependsOn": [
-            "[resourceId('Microsoft.Web/sites', parameters('appInsights1'))]"
-        ],
         "properties": {
             "applicationId": "[parameters('appInsights1')]",
             "application_Type": "web"
