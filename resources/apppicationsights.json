@@ -12,7 +12,7 @@
     "resources": [
     {
         "name": "appInsights1",
-        "type": "microsoft.insights/components/appInsights1",
+        "type": "microsoft.insights/components",
         "apiVersion": "2015-05-01",
         "location": "Central US",
         "properties": {
