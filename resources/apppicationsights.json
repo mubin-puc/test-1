@@ -11,7 +11,7 @@
     "resources": [
     {
         "name": "[parameters('appInsights1')]",
-        "type": "microsoft.insights/components/devappserviceARM",
+        "type": "microsoft.insights/components",
         "apiVersion": "2015-05-01",
         "location": "Central US",
         "properties": {
