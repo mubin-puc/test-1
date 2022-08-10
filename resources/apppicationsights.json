@@ -1,24 +1,19 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-    
-        "insightappID": {
-            "type": "string",
-            "defaultValue": "name"
-        }
-    },
+    "parameters": {},
     "variables": {},
     "resources": [
-    {
-        "name": "appInsights1",
-        "type": "microsoft.insights/components",
-        "apiVersion": "2015-05-01",
-        "location": "Central US",
-        "properties": {
-            "applicationId": "[parameters('insightappID')]",
-            "application_Type": "web"
-        }
-    }],
+        {
+    "name": "appInsights1",
+    "type": "Microsoft.Insights/components",
+    "apiVersion": "2015-05-01",
+    "location": "Central US",
+    "properties": {
+        "applicationId": "webApp1",
+        "application_Type": "web"
+    }
+}
+    ],
     "outputs": {}
 }
