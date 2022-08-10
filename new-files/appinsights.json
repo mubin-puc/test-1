@@ -135,25 +135,25 @@
             }
         },
         {
-            "name": "appInsights1-ServerErrors-webApp1",
+            "name": "appInsights1-ServerErrors-webAppifidemo",
             "type": "Microsoft.Insights/alertrules",
             "apiVersion": "2016-03-01",
             "location": "East US",
             "tags": {
-                "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/webApp1')]": "Resource",
-                "displayName": "appInsights1 ServerErrors rule for webApp1"
+                "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/webAppifidemo')]": "Resource",
+                "displayName": "appInsights1 ServerErrors rule for webAppifidemo"
             },
            
           
             "properties": {
-                "name": "appInsights1-ServerErrors-webApp1",
-                "description": "webApp1 has some server errors, status code 5xx.",
+                "name": "appInsights1-ServerErrors-webAppifidemo",
+                "description": "webAppifidemo has some server errors, status code 5xx.",
                 "isEnabled": false,
                 "condition": {
                     "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
                     "dataSource": {
                         "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-                        "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/webApp1')]",
+                        "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/webAppifidemo')]",
                         "metricName": "Http5xx"
                     },
                     "operator": "GreaterThan",
@@ -168,24 +168,24 @@
             }
         },
         {
-            "name": "appInsights1-ForbiddenRequests-webApp1",
+            "name": "appInsights1-ForbiddenRequests-webAppifidemo",
             "type": "Microsoft.Insights/alertrules",
             "apiVersion": "2016-03-01",
             "location": "East US",
             "tags": {
-                "displayName": "appInsights1 ForbiddenRequests rule for webApp1"
+                "displayName": "appInsights1 ForbiddenRequests rule for webAppifidemo"
             },
            
           
             "properties": {
-                "name": "appInsights1-ForbiddenRequests-webApp1",
-                "description": "webApp1 has some requests that are forbidden, status code 403.",
+                "name": "appInsights1-ForbiddenRequests-webAppifidemo",
+                "description": "webAppifidemo has some requests that are forbidden, status code 403.",
                 "isEnabled": false,
                 "condition": {
                     "odata.type": "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
                     "dataSource": {
                         "odata.type": "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
-                        "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/webApp1')]",
+                        "resourceUri": "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/webAppifidemo')]",
                         "metricName": "Http403"
                     },
                     "operator": "GreaterThan",
@@ -206,11 +206,11 @@
             "location": "Central US",
             "kind": "web",
             "tags": {
-                "displayName": "appInsights1 Component for webApp1"
+                "displayName": "appInsights1 Component for webAppifidemo"
             },
           
             "properties": {
-                "applicationId": "webApp1",
+                "applicationId": "webAppifidemo",
                 "application_Type": "web"
             }
         }
