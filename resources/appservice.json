@@ -1,12 +1,7 @@
 {
    "$schema":"https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
    "contentVersion":"1.0.0.0",
-   "parameters":{
-      "appServicePlan-ifitechdemo-ARM":{
-         "type":"string",
-         "defaultValue":"appServicePlan-ifitechdemo-ARM"
-      }
-   },
+   "parameters":{},
    "variables":{
       "devappservice":"dev-ifitechdemo-app-ARM",
       "QAappservice":"QA-ifitechdemo-app-ARM",
@@ -20,7 +15,7 @@
          "location":"[resourceGroup().location]",
          "properties":{
             "name":"[variables('devappservice')]",
-            "serverFarmId":"[resourceId('Microsoft.Web/serverfarms' , parameters('appServicePlan-ifitechdemo-ARM'))]"
+            "serverFarmId":"[resourceId('Microsoft.Web/serverfarms' , 'appServicePlan-ifitechdemo-ARM')]"
          }
       },
       {
@@ -30,7 +25,7 @@
          "location":"[resourceGroup().location]",
          "properties":{
             "name":"[variables('QAappservice')]",
-            "serverFarmId":"[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlan-ifitechdemo-ARM'))]"
+            "serverFarmId":"[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
          }
       },
       {
@@ -40,7 +35,7 @@
         "location": "[resourceGroup().location]",
         "properties": {
           "name": "[variables('prodappservice')]",
-          "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlan-ifitechdemo-ARM'))]"
+          "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan-ifitechdemo-ARM')]"
         }
       }
    ],
