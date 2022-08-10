@@ -81,9 +81,6 @@
                 "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/appServicePlan1')]": "Resource",
                 "displayName": "appInsights1 CPUHigh rule for appServicePlan1"
             },
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms', 'appServicePlan1')]"
-            ],
             "properties": {
                 "name": "appInsights1-CPUHigh-appServicePlan1",
                 "description": "The average CPU is high across all the instances of appServicePlan1",
