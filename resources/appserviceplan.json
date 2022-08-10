@@ -1,22 +1,33 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
-    "variables": {},
+    "parameters": {
+        "sku": {
+            "type": "string",
+            "defaultValue": "S1"
+        },
+        "sku capacity": {
+            "type": "string",
+            "defaultValue": "1"
+        },
+        "appServicePlan-ifitechdemo-ARM": {
+            "type": "string",
+            "defaultValue": "appServicePlan-ifitechdemo-ARM"
+        }
+    },
+    "variables": {
+    },
     "resources": [{
-        "name": "appServicePlan-ifitechdemo-ARM",
+        "name": "[parameters('appServicePlan-ifitechdemo-ARM')]",
         "type": "Microsoft.Web/serverfarms",
         "apiVersion": "2018-02-01",
         "location": "[resourceGroup().location]",
         "sku": {
-            "name": "F1",
-            "capacity": 1
-        },
-        "tags": {
-            "displayName": "appServicePlan-ifitechdemo-ARM"
+            "name": "[parameters('sku')]",
+            "capacity": "[parameters('sku capacity')]"
         },
         "properties": {
-            "name": "appServicePlan-ifitechdemo-ARM"
+            "name": "[parameters('appServicePlan-ifitechdemo-ARM')]"
         }
     }],
     "outputs": {}
