@@ -1,0 +1,21 @@
+name: My Target Repository Workflow
+
+on:
+  repository_dispatch:
+    types:
+      - workflow_dispatch
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run My Workflow Step
+        run: |
+          # Add your workflow steps here
+          echo "Running workflow steps in the target repository."
+
+      # Add more steps as needed
